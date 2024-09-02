@@ -2,13 +2,13 @@ package main
 
 import (
 	"database/sql"
-	"time"
 	"fmt"
 	"log"
 	"net/http"
 	"os"
 	"strconv"
 	"strings"
+	"time"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
@@ -50,13 +50,12 @@ func main() {
 
 	// Configure CORS
 	config := cors.DefaultConfig()
-    config.AllowAllOrigins = true
-    config.AllowMethods = []string{"POST", "GET", "PUT", "OPTIONS"}
-    config.AllowHeaders = []string{"Origin", "Content-Type", "Authorization", "Accept", "User-Agent", "Cache-Control", "Pragma"}
-    config.ExposeHeaders = []string{"Content-Length"}
-    config.AllowCredentials = true
-    config.MaxAge = 12 * time.Hour
-
+	config.AllowAllOrigins = true
+	config.AllowMethods = []string{"POST", "GET", "PUT", "OPTIONS"}
+	config.AllowHeaders = []string{"Origin", "Content-Type", "Authorization", "Accept", "User-Agent", "Cache-Control", "Pragma"}
+	config.ExposeHeaders = []string{"Content-Length"}
+	config.AllowCredentials = true
+	config.MaxAge = 12 * time.Hour
 
 	// Setup routes
 	router := gin.Default()
@@ -66,7 +65,6 @@ func main() {
 	router.POST("/products", CreateProduct)
 	router.PUT("/products/:productId", UpdateProduct)
 	router.DELETE("/products/:productId", DeleteProduct)
-
 
 	// Run the router
 	router.Run()
@@ -119,15 +117,13 @@ func CreateProduct(c *gin.Context) {
 		log.Fatal("(CreateProduct) c.BindJSON", err)
 	}
 
-	query := `INSERT INTO products (name, description, image, category, price) VALUES ($1, $2, $3, $4, $5)`
-	res, err := db.Exec(query, newBike.Name, newBike.Description, newBike.Image, newBike.Category, newBike.Price)
+	query := `INSERT INTO products (name, description, image, category, price) VALUES ($1, $2, $3, $4, $5) RETURNING id`
+	id := 0
+	err = db.QueryRow(query, newBike.Name, newBike.Description, newBike.Image, newBike.Category, newBike.Price).Scan(&id)
 	if err != nil {
-		log.Fatal("(CreateProduct) db.Exec", err)
+		log.Fatal("(CreateProduct) Last Insert Id", err)
 	}
-	newBike.Id, err = res.LastInsertId()
-	if err != nil {
-		log.Fatal("(CreateProduct) res.LastInsertId", err)
-	}
+	fmt.Println("New product ID is:", id)
 
 	c.JSON(http.StatusOK, newBike)
 }
