@@ -192,4 +192,4 @@ Here’s an example of sending a GET request to the specified route to retrieve 
 
 If you are searching for fun things to do, then look no further than GoeBike rentals and tours. It is a fun and easy outdoor activity that the entire family can enjoy.
 
-Electric bikes are one of the very bests way to explore an area. You can easily cover lots of ground, while still getting an up close and personal look at all the scenery and attractions.
+Electric bikes are one of the very best ways to explore an area. You can easily cover lots of ground, while still getting an up close and personal look at all the scenery and attractions.
