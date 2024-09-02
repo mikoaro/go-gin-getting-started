@@ -30,7 +30,7 @@ To connect a Neon PostgreSQL database with a sample E-Bike Go API application bu
 5. Click **Create project** to create a Neon project with a database.
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5c22f9zlc2n7g1v3yw1r.png)
 
-6. Your Neon project and database will be created in few seconds.
+6. Your Neon project and database will be created in just a few.
 7. After your Neon database is created, click the **SQL Editor** menu and run the following three commands to drop an existing sample table, create a new sample table and insert some data:
 
 ```
@@ -70,19 +70,19 @@ Open the project in VS Code or any other editor of your choice.
 
 **Step 2: Run the code and check the result**
 
-1.Run the following command to copy **.env.example** and rename it to **.env**:
+1. Run the following command to copy **.env.example** and rename it to **.env**:
 
 ```
 cp .env.example .env
 ```
-2.Copy and paste the corresponding connection string into the .env file. The example result is as follows:
+2. Copy and paste the corresponding connection string into the .env file. The example result is as follows:
 
 ```
 DATABASE_URL='{}'
 ```
 Be sure to replace the placeholders {} with the connection parameters for Postgres obtained from the Quickstart menu.
-3.Save the **.env** file. 
-4.Open a VS Code terminal and run the project using the following commands:
+3. Save the **.env** file. 
+4. Open a VS Code terminal and run the project using the following commands:
 
 ```
 go mod tidy
