@@ -1,6 +1,6 @@
 # Connect An Application to Neon Example (Go)
 
-Learn how to use Go with Neon by exploring a demo Go API built with [Gin](https://github.com/gin-gonic/gin) plus [PQ driver](https://github.com/lib/pq) and how the API is used to create and manage E-bikes for rentals.
+Learn how to use Go with Neon by exploring a demo Go API built with [Gin](https://github.com/gin-gonic/gin) plus [PQ driver](https://github.com/lib/pq) and how the API is used to create and manage E-bike products. E-Bikes are hands down one of the best ways to experience an area up close while covering a lot of ground easily.
 
 **Overview**
 
@@ -187,3 +187,9 @@ Here’s an example of sending a GET request to the specified route to retrieve 
 
 
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/au0toty7dofuphakzsdy.png)
+
+**Coming Soon**
+
+If you are searching for fun things to do, then look no further than GoeBike rentals and tours. It is a fun and easy outdoor activity that the entire family can enjoy.
+
+Electric bikes are one of the very best ways to explore an area. You can easily cover lots of ground, while still getting an up close and personal look at all the scenery and attractions.
