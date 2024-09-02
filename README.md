@@ -9,7 +9,7 @@ To connect a Neon PostgreSQL database with a sample E-Bike Go API application bu
 1. Set up your environment.
 2. Set up your Postgres database using the Neon console, Neon CLI or Psql.
 3. Build and run your Go API.
-4. With a Neon account, database, and a Go API application, you can perform basic CRUD operations by making your API calls using any of the REST API clients including cURL, POSTMAN, and so on. Also, an application such as a Vue or React app can connect to the GetProducts endpoint to retrieve and render all the products in a database table.
+4. With a Neon account, database, and a Go API application, you can perform basic CRUD operations by making your API calls using any of the REST API clients including cURL and POSTMAN. Also, an application such as a Vue or React app can connect to the GetProducts endpoint to retrieve and render all the products in a database table.
 
 **Prerequisites**
 
