@@ -81,7 +81,9 @@ cp .env.example .env
 DATABASE_URL='{}'
 ```
 Be sure to replace the placeholders {} with the connection parameters for Postgres obtained from the Quickstart menu.
+
 3. Save the **.env** file. 
+
 4. Open a VS Code terminal and run the project using the following commands:
 
 ```
